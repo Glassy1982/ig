@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale, width=device-width">
+        <title>IG</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <a href="{{ url_for('index') }}">
+                    <img src="/static/images/logo.png">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <div class="dropdown">
+                        <li><a href="{{ url_for('index') }}">Why Us?</a></li>
+                        <li><a href="{{ url_for('index') }}">About</a></li>
+                        <li><a href="{{ url_for('index') }}">Testimonials</a></li>
+                        <li><a href="{{ url_for('index') }}">Contact</a></li>
+                    </div>
+                </ul>
+                <a href="#">Bookings</a>
+                <a href="#">Meal Prep</a>
+                <ul>
+                    <li><a href="#">Fitness Programs</a></li>
+                    <div class="dropdown">
+                         <li><a href="#">Bootcamp</a></li>
+                          <li><a href="#">Personal Training</a></li>
+                    </div>
+                </ul>
+                <a href="#">Store</a>
+                <a href="#">Cart</a>
+                <input type="checkbox" class="toggler">
+                <div class="burger"><div></div></div>
+            </nav>
+        </header>
+    </body>
+</html>
