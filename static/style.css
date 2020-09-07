@@ -71,7 +71,10 @@ nav a:hover {
     height: 30px;
     opacity: 0;
 }
-
+.toggler:checked + nav {
+    transform: translateY(0%);
+    transition: transform 0.4s ease-in-out;
+}
 .burger {
     display: none;
     align-items: center;
@@ -134,8 +137,8 @@ nav a:hover {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        transform: translateY(0%);
-
+        transform: translateY(-200%);
+        transition: transform 0.4s ease-in-out;
     }
     header nav ul {
         display: flex;
