@@ -21,14 +21,14 @@
                 <ul>
                     <li><a href="{{ url_for('index') }}">Home</a></li>
                     <div class="dropdown">
-                        <li><a href="{{ url_for('index') }}">Why Us?</a></li>
-                        <li><a href="{{ url_for('index') }}">About</a></li>
-                        <li><a href="{{ url_for('index') }}">Testimonials</a></li>
-                        <li><a href="{{ url_for('index') }}">Contact</a></li>
+                        <li><a href="{{ url_for('whyus') }}">Why Us?</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                        <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     </div>
                 </ul>
                 <a href="#">Bookings</a>
-                <a href="#">Meal Prep</a>
+                <a href="{{ url_for('mealprep') }}">Meal Prep</a>
                 <ul>
                     <li><a href="#">Fitness Programs</a></li>
                     <div class="dropdown">
@@ -41,52 +41,7 @@
             </nav>
 
         </header>
-        <div id="iGGymImg">
-            <img src="/static/images/eyeCatch.jpg">
-        </div>
-        <div id="iGSlogan">
-            <img src="/static/images/igslogan.jpg">
-        </div>
-        <div class="mainScroll">
-            <div id="headline">
-                <h1>DO NOT START ANOTHER DIET!</h1>
-            </div>
-            <div id="popUpLeft" class="popUpInfo">
-                <h2>95% of all those who lose weight gain it all back
-                after just 36 months...</h2>
-            </div>
-            <div id="popUpRight" class="popUpInfo">
-                <h2>...and 2/3rds of those gain even more weight back
-                than they lost!</h2>
-            </div>
-            <div id="igBio">
-                <h1>STOP DIETING AND START MAKING PROGRESS!</h1>
-                <div class="flex">
-                    <img src="/static/images/igwhite.png">
-                    <p>Inside my Personal Training Program, based at my 
-                    Hartlepool gym, I educate people on how to lose weight
-                     successfully, long term, just like I did nearly 20 
-                     years ago when I lost over 100lbs and kept it off 
-                     for nearly two decades</p>
-                </div>
+        {% block content %}{% endblock %}
 
-            </div>
-            <div id="igChange">
-                <h1>STRENGTHEN YOUR BODY, STRENGTHEN YOUR MIND!</h1>
-                <div class="flex">
-                    <img src="/static/images/igblack.png">
-                    <p>Start your transformation today and book a consultation
-                    with Ian himself!</p>
-                </div>                                   
-            </div>
-            <div id="bookConsult">
-                    
-                <form>
-                    <input type="text" id="name" name="name" placeholder="Name">
-                    <input type="email" id="email" name="email" placeholder="Email">
-                    <input type="submit">
-                </form>
-            </div>
-        </div>
     </body>
 </html>
