@@ -270,5 +270,8 @@ nav a:hover {
         flex-direction: column;
         text-align: center;
     }
+    #bookConsult h1, #igBio h1 {
+        width: 60%;
+    }
 
 }
