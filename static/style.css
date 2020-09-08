@@ -140,63 +140,58 @@ nav a:hover {
     color: white;
     position: relative;
     font-size: large;
+    padding: 10px;
+     width: 40%;
 }
 #popUpLeft {
     float: left;
     margin-top:400px;
-    margin-left: 20px;
-    width: 30%;
+    margin-left: 5px;
 }
 #popUpRight {
     float: right;
     margin-top: 700px;
-    margin-right: 20px;
-    width: 30%;
+    margin-right: 5px;
 }
 
+#igBio h1, #igChange h1 {
+    text-align: center;
+    font-size: large;
+    margin-bottom: 20px;
+}
 
 #igBio {
     margin-top: 1000px;
     background: rgb(0,0,0,0.9);
     color: white;
-    padding: 20px;
-}
-#igBio h1 {
-    text-align: center;
-    font-size: large;
+    padding-top: 20px;
 }
 
-#igBio p {
-    float: right;
+#igBio p, #igChange p {
+    width: 60%;
+    font-size: 12px;
 }
 
 
-#bookConsult {
+#igChange {
     background: rgb(255,255,255,0.9);
     color: black;
-    padding: 20px;
+    padding-top: 20px;
     overflow: auto;
 }
-#bookConsult h1 {
-    text-align: center;
-    font-size: large;
-}
+
 .flex {
     display: flex;
     justify-content: space-between;
 }
-.flexSpace {
-    float: right;
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    align-items: center;
-}
-#bookConsult p {
-    padding-right: 30px;
+
+
+#bookConsult {
+    background: rgb(0,0,0,0.9);
+    color: white;
     padding-top: 20px;
-    width: 40%;
 }
+
 #bookConsult form {
     margin-top: 20px;
     height: 200px;
@@ -264,14 +259,19 @@ nav a:hover {
      header {
         height: 60px;
     }
-
-    .flex, .flexSpace {
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
+    .popUpInfo {
+        font-size: 10px;
     }
-    #bookConsult h1, #igBio h1 {
-        width: 60%;
+    
+    #igChange h1, #igBio h1 {
+        width: 100%;
+        font-size: 14px;
+    }
+   #igBio img {
+        width: 80px;
+    }
+    #igChange img {
+        width: 90px;
     }
 
 }
