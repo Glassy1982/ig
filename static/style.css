@@ -180,8 +180,24 @@ nav a:hover {
     text-align: center;
     font-size: large;
 }
-#bookConsult p {
+.flexSpace {
     float: right;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+}
+#bookConsult p {
+    padding-right: 30px;
+    padding-top: 20px;
+    width: 40%;
+}
+#bookConsult form {
+    margin-top: 20px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 
@@ -232,6 +248,7 @@ nav a:hover {
     .popUpInfo {
         font-size: 13px;
     }
+
 }
 
 @media screen and (max-width: 700px){
