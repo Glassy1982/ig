@@ -4,6 +4,7 @@ from flask import Flask, render_template, url_for, request, session
 
 app = Flask(__name__)
 
+emails =[]
 
 @app.route ('/')
 def index():
