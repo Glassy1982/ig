@@ -10,6 +10,15 @@ def index():
     return render_template('index.html')
 
 
+@app.route ('/formSuccess', methods=["POST"])
+def formSuccess():
+    if request.method=="POST":
+        email = request.form.get('email')
+        if not emails.__contains__(email):
+            emails.append(email)
+    return render_template('formSuccess.html', emails=emails)
+    
+
 @app.route ('/whyus')
 def whyus():
     return render_template('whyus.html')

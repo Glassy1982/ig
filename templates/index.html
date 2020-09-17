@@ -41,7 +41,7 @@
     </div>
     <div id="bookConsult">
 
-        <form>
+        <form action="{{ url_for('formSuccess') }}" method="post">
             <input type="text" id="name" name="name" placeholder="Name">
             <input type="email" id="email" name="email" placeholder="Email">
             <input type="submit">
