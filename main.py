@@ -21,7 +21,7 @@ def formSuccess():
        
         name = request.form.get('name')
         email = request.form.get('email')
-        db.execute('INSERT INTO emails VALUES(3, %s, %s)', (name, email))
+        db.execute('INSERT INTO emails VALUES(default, %s, %s)', (name, email))
         db.execute("SELECT * FROM emails")
         conn.commit()
         mail = db.fetchall()
