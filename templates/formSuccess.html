@@ -3,14 +3,9 @@
 {% block content %}
 
 <ul style="margin-top: 100px; text-align: center;">
-        {% for m in mail %}
+        {% for m in mails %}
                 <li>{{ m }}</li>
         {% endfor %}
 </ul>
 
-<ul style="margin-top: 400px; text-align: center;">
-	{% for email in emails %}
-		<li>{{ email }}</li>
-	{% endfor %}
-</ul>
 {% endblock %}
