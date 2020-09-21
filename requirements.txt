@@ -7,4 +7,4 @@ Werkzeug==1.0.1
 gunicorn
 psycopg2
 sqlalchemy
-flask-mail
+Flask-Mail
