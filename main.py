@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 import psycopg2
 from flask_mail import Mail, Message 
-
+from apscheduler.scheduler import Scheduler
 
 app = Flask(__name__)
 
@@ -19,7 +19,24 @@ mail = Mail(app)
 conn = psycopg2.connect('host=ec2-52-0-155-79.compute-1.amazonaws.com user=ssukjbptgzsada password=dacde918826aac7e0ee3680078d5487e3a6808ba18cab5515f6a55c0e69fdc09 dbname=daq9525pn99tuo')
 db = conn.cursor()
 
+#start scheduler
+sched = Scheduler()
+sched.start()
 
+def mailing():
+    db.execute("SELECT * FROM emails")
+    users = db.fetchall()
+    
+    with mail.connect() as con:
+        for user in users:
+            
+            msg = Message("Hello, multitest", recipients=[user[2]])
+            msg.body = "This is a test by Craig, don't worry about it. Do not reply!"
+            con.send(msg)
+    
+
+sched.add_cron_job(mailing, minute='30')
+    
 @app.route ('/')
 def index():
     return render_template('index.html')
@@ -42,16 +59,6 @@ def formSuccess():
 
 @app.route ('/whyus')
 def whyus():
-    db.execute("SELECT * FROM emails")
-    users = db.fetchall()
-    
-    with mail.connect() as con:
-        for user in users:
-            
-            msg = Message("Hello, multitest", recipients=[user[2]])
-            msg.body = "This is a test by Craig, don't worry about it. Do not reply!"
-            con.send(msg)
-    
     return render_template('whyus.html')
 
 
